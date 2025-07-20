@@ -5,6 +5,7 @@ body, html, #root {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f7fa;
+  overflow: hidden; /* 💡 Prevents scrollbars on body */
 }
 
 /* Wrapper */
@@ -12,13 +13,14 @@ body, html, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Better than height: 100vh */
   padding: 20px;
-  background-image: url('/consimg.jpeg'); /* replace with your actual path if different */
+  background-image: url('/consimg.jpeg'); /* ✅ Use public path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  box-sizing: border-box;
 }
 
 /* Title above dashboard */
@@ -43,6 +45,9 @@ body, html, #root {
   max-width: 600px;
   width: 100%;
   text-align: center;
+  max-height: 90vh; /* 💡 Limit height to avoid overflow */
+  overflow-y: auto; /* Scroll only inside container if needed */
+  box-sizing: border-box;
 }
 
 /* Heading */
@@ -95,6 +100,7 @@ body, html, #root {
 @media (max-width: 600px) {
   .dashboard-container {
     padding: 30px 20px;
+    max-height: 90vh;
   }
 
   .action-card {
