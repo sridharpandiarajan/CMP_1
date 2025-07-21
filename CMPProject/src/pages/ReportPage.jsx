@@ -10,7 +10,7 @@ const ReportPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/workers')
+    fetch('https://cmp-1-uya2.onrender.com/api/workers')
       .then(res => res.json())
       .then(data => setWorkers(data))
       .catch(err => console.error("Error fetching workers:", err));
