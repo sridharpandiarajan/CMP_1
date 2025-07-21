@@ -18,7 +18,7 @@ const WorkerCards = () => {
   };
 
   useEffect(() => {
-    fetch('https://cmp-1-uya2.onrender.com/routes/Workers')
+    fetch('https://cmp-1-uya2.onrender.com/api/workers')
       .then(async (res) => {
         const contentType = res.headers.get("content-type");
         if (!res.ok) {
@@ -39,7 +39,7 @@ const WorkerCards = () => {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`https://cmp-1-uya2.onrender.com/routes/Workers/${id}`, {
+      const res = await fetch(`https://cmp-1-uya2.onrender.com/api/workers/${id}`, {
         method: 'DELETE',
       });
 
