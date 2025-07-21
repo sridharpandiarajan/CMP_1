@@ -8,7 +8,7 @@ const DashboardHome = () => {
   return (
     <div className="dashboard-home-wrapper">
     <div className="dashboard-container">
-      <h2 className="main-title">Collin ManPower Agency</h2>
+      <h2 className="main-title">🏗️Collin ManPower Agency👷🏻‍♂️</h2>
       <h1 className="dashboard-heading">📋 Worker Management System</h1>
         <div className="action-grid">
           <div className="action-card" onClick={() => navigate('/add')}>
